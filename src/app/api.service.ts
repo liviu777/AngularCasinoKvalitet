@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -11,7 +12,12 @@ export class ApiService {
   }
 
   // tslint:disable-next-line:typedef
-  public get() {
+  public findAllUsers() {
     return this.httpClient.get(this.SERVER_URL + '/user/findAll');
+  }
+
+  // tslint:disable-next-line:typedef
+  public createUser(user) {
+    return this.httpClient.post(this.SERVER_URL + '/user/create', user);
   }
 }

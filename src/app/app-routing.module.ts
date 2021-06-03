@@ -5,6 +5,8 @@ import {AboutComponent} from './about/about.component';
 import {Routes, RouterModule, RoutesRecognized} from '@angular/router';
 
 import {BrowserModule} from '@angular/platform-browser';
+import {MatCardModule} from '@angular/material/card';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -17,7 +19,9 @@ const routes: Routes = [
   imports: [
     CommonModule,
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    MatCardModule,
+    MatProgressSpinnerModule
   ], exports: [
     RouterModule
   ]

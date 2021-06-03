@@ -16,10 +16,14 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
 
     console.log('get users');
-    this.apiService.get().subscribe((data: any[]) => {
+    this.apiService.findAllUsers().subscribe((data: any[]) => {
       console.log(data);
       this.users = data;
     });
   }
+
+  // onSumbit(){
+  //   user = {this}
+  // }
 
 }

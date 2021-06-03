@@ -5,7 +5,7 @@
   <mat-card *ngFor="let user of users" style="margin-top:10px;">
     <mat-card-header>
       <mat-card-title>{{user.name}}</mat-card-title>
-      <mat-card-subtitle>{{user.age}} $/ {{user.username}}
+      <mat-card-subtitle>{{user.age}}
       </mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
@@ -15,8 +15,19 @@
       <!--      <img style="height:100%; width: 100%;" src="{{ product.imageUrl }}" />-->
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button> Buy product</button>
+      <button mat-button> Get User</button>
     </mat-card-actions>
   </mat-card>
+  <form (ngSubmit)="onSubmit()" >
+    <div>
+      <label for = "name">
+        Name
+      </label>
+      <input id = "name" type = "text" formControlName="name">
+    </div>
+    <button type="submit">
+      Create User
+    </button>
+  </form>
 </div>
 
